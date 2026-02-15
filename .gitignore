@@ -1,0 +1,13 @@
+# Ignorar carpetas de compilación
+target/
+out/
+build/
+
+# Ignorar archivos de IDE
+.idea/
+*.iml
+.vscode/
+
+# Ignorar archivos temporales
+*.log
+.DS_Store
