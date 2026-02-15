@@ -1,4 +1,4 @@
-name: CI Completo
+name: CI Completo (Ambos Proyectos)
 
 on:
   push:
@@ -20,7 +20,7 @@ jobs:
           cache: maven
       
       - name: Test MasterMind
-        run: mvn -B verify --file MasterMind/pom.xml
+        run: xvfb-run --auto-servernum mvn -B verify --file MasterMind/pom.xml
 
   build-bacteria:
     runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
           cache: maven
       
       - name: Test BacteriaLife
-        run: mvn -B verify --file BacteriaLife/pom.xml
+        run: xvfb-run --auto-servernum mvn -B verify --file BacteriaLife/pom.xml
